@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Women Safety App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emergency_text">SOS! HELP!! HELP!!</string>
+    <string name="location_text">My current location is , sharing for the tracking and safety.</string>
+    <string name="welcome_message">Welcome, %1$s! You have %2$d new messages.</string>
+    <string name="version">version: alpha</string>
+    <string name="dev_name">Dev: Mayank Sharma (just a student)</string>
+    <string name="feedback_text">To submit feedback for feature requests, suggestions, or report errors and bugs, please email at #$!#%%$#@%$#!@gmail.com.</string>
+    <string name="about_text">This women\'s safety app offers essential security and tracking tools. It enables women to quickly access emergency assistance and location tracking, designed for ease of use and equipped with modern features.</string>
+
+</resources>

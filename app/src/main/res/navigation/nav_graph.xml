@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moreFragment">
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:label="Women Safety"
+        android:name="com.ms.womensafetyapp.features.morecontainer.more.MoreFragment"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_moreFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="com.ms.womensafetyapp.features.morecontainer.more.locations.LocationsFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_locations">
+
+<!--        <action-->
+<!--            android:id="@+id/action_locationFragment_to_moreFragment"-->
+<!--            app:destination="@id/moreFragment"-->
+<!--            app:popUpTo="@id/moreFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.ms.womensafetyapp.features.morecontainer.more.phonenumber.PhoneNumberFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_phone_number">
+<!--        <action-->
+<!--            android:id="@+id/action_phoneNumberFragment_to_moreFragment"-->
+<!--            app:destination="@id/moreFragment"-->
+<!--            app:popUpTo="@id/moreFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.ms.womensafetyapp.features.morecontainer.more.maps.MapsFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_maps" />
+
+</navigation>

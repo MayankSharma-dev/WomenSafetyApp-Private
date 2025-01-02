@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="2dp"
+    tools:context=".features.morecontainer.more.MoreFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/map_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:divider="@drawable/empty_broad_divider"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="350dp">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/phone_contact_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/show_phone_number"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:src="@drawable/baseline_fullscreen_24" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_margin="10dp"
+                    android:text="Contacts"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="350dp">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/locations_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/show_location"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:src="@drawable/baseline_fullscreen_24" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_margin="10dp"
+                    android:text="Locations"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        xmlns:tomtom="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/map_container"-->
+<!--        android:name="com.tomtom.sdk.map.display.ui.MapFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        tomtom:styleMode="Dark"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"-->
+<!--        tomtom:mapKey="7PXb3kIsDfcaqgWmxv8nvltowLm5GwuQ" />-->
+
+
+    <Button
+        android:id="@+id/nearby_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Nearby Station"
+        app:layout_constraintStart_toStartOf="@id/map_container"
+        app:layout_constraintTop_toTopOf="@id/map_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:paddingVertical="10dp"-->
+    <!--tools:context=".features.more.MoreFragment">-->
+
+    <!--<HorizontalScrollView-->
+    <!--    android:id="@+id/horizontalScrollView"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="0dp"-->
+    <!--    android:fillViewport="true"-->
+    <!--    app:layout_constraintBottom_toTopOf="@+id/map_container"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:divider="@drawable/empty_broad_divider">-->
+
+    <!--        <androidx.fragment.app.FragmentContainerView-->
+    <!--            android:id="@+id/phone_contact_fragment"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:minWidth="350dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toStartOf="@+id/locations_fragment"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/show_phone_number"-->
+    <!--            android:layout_width="48dp"-->
+    <!--            android:layout_height="48dp"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:src="@drawable/baseline_fullscreen_24"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/phone_contact_fragment"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/phone_contact_fragment" />-->
+
+
+    <!--        <androidx.fragment.app.FragmentContainerView-->
+    <!--            android:id="@+id/locations_fragment"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:minWidth="350dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/phone_contact_fragment"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/show_location"-->
+    <!--            android:layout_width="48dp"-->
+    <!--            android:layout_height="48dp"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:src="@drawable/baseline_fullscreen_24"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/locations_fragment"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/locations_fragment" />-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</HorizontalScrollView>-->
+
+
+    <!--&lt;!&ndash;        <androidx.fragment.app.FragmentContainerView&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/maps_fragment"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="match_parent" />&ndash;&gt;-->
+
+    <!--<androidx.fragment.app.FragmentContainerView-->
+    <!--    android:id="@+id/map_container"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="0dp"-->
+    <!--    android:layout_weight="1"-->
+    <!--    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />-->
+
+    <!--<ImageButton-->
+    <!--    android:id="@+id/show_map"-->
+    <!--    android:layout_width="48dp"-->
+    <!--    android:layout_height="48dp"-->
+    <!--    android:layout_margin="10dp"-->
+    <!--    android:src="@drawable/baseline_fullscreen_24"-->
+    <!--    app:layout_constraintStart_toStartOf="@id/map_container"-->
+    <!--    app:layout_constraintTop_toTopOf="@id/map_container" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
